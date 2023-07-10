@@ -1,0 +1,253 @@
+/* CSS styles */
+body {
+        margin: 0;
+        padding: 0;
+        background-color: #0f0f0f;
+    }
+
+    .container {
+        max-width: 1920px;
+        max-height: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #0f0f0f;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .logo {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        width: 1200px; /* Adjust the width to your desired value */
+        margin-left: auto; /* Adjust the margin to move it to the right */
+    }
+
+    .logo img {
+        height: 100px;
+        width: 100px;
+        margin-right: 10px;
+    }
+
+    .text-center {
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+        font-size: 80px;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #f8f8f8;
+    }
+
+    .email-text {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 25px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #f8f8f8;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 80px; /* Adjust the top position as needed */
+        right: 30px; /* Adjust the right position as needed */
+        transform: translateY(-50%);
+        background-color: #0f0f0f;
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar span {
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+        margin-bottom: 4px;
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .sidebar.open span:nth-child(2) {
+        transform: scaleX(0);
+    }
+
+    .sidebar.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .sidebar-list {
+        position: fixed;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        top: 80px;
+        bottom: 50px;
+        font-size: 20px;
+        left: -100px; /* Change 'right' to 'left' and set it to a negative value */
+        width: 100px;
+        height: 100%;
+        background-color: rgba(15, 15, 15, 0.5);
+        padding: 20px;
+        transition: right 0.3s ease; /* Change 'right' to 'left' */
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .sidebar.open .sidebar-list {
+        right: 0;
+        width: 100px; /* Add this line to ensure full width */
+        opacity: 1;
+        pointer-events: auto;
+        border-radius: 5px;
+    }
+
+    .sidebar.open .sidebar-list a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    .sidebar.open .sidebar-list a:hover {
+        text-decoration: underline;
+    }
+
+    .email-form {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column; /* Changed flex direction to column */
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        background-color: rgba(15, 15, 15, 0.0);
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 360px;
+        margin-left: 150px;
+        margin-right: auto;
+    }
+
+    .email-input {
+        text-align: center;
+        flex-grow: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 10px 10px 10px 10px;
+        width: 100%; /* Adjust the width to your desired value */
+        max-width: 350px; /* Limit the maximum width of the input box */
+        font-size: 16px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .submit-btn {
+        text-align: center;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        width: 120px; /* Adjust the width to your desired value */
+        height: 25px; /* Adjust the height to your desired value */
+        margin-top: 10px; /* Added margin-top to create space below the email form */
+        border-radius: 25px; /* Adjust the border radius to create a slightly smaller button */
+        display: flex; /* Use flexbox */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+    }
+
+    .join-button {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        width: 240px; /* Adjust the width to your desired value */
+        height: 40px; /* Adjust the height to your desired value */
+        margin-top: 10px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        text-decoration: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: 200px;
+        margin-top: -80px;
+        margin-bottom: 100px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f2f2f2;
+      }
+
+    @media (max-width: 1000px) {
+        .container {
+            padding: 20px;
+        }
+
+        .text-center {
+            font-size: 24px; /* Reduced font size */
+            margin-left: 20px; /* Adjusted left margin */
+            margin-right: 20px; /* Adjusted right margin */ 
+        }
+
+        .email-text {
+            font-size: 12px; /* Reduced font size */
+        }
+
+        .sidebar-list {
+            font-size: 12px; /* Reduced font size */
+        }
+
+        .email-form {
+            margin-top: 20px; /* Reduced top margin */
+            margin-left: 20px; /* Adjusted left margin */
+            margin-right: 20px; /* Adjusted right margin */
+        }
+
+        .email-input {
+            font-size: 12px; /* Reduced font size */
+        }
+
+        .submit-btn {
+            font-size: 12px; /* Reduced font size */
+        }
+
+        .join-button {
+            font-size: 12px; /* Reduced font size */
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .container {
+            padding: 20px;
+        }
+    }
